@@ -24,6 +24,10 @@ namespace HelloWorldClient
 
         private static void InvokeUsingTcp()
         {
+            #region 하드코딩 설정 방법
+
+            /*
+
             // net.tcp uri 생성
             Uri uri = new Uri("net.tcp://localhost/wcf/helloworldservice");
 
@@ -33,6 +37,18 @@ namespace HelloWorldClient
             // 채널 생성
             ChannelFactory<IHelloWorld> factory = new ChannelFactory<IHelloWorld>(endpoint);
             IHelloWorld proxy = factory.CreateChannel();
+
+            */
+
+            #endregion
+
+            #region App.config 설정 방법
+
+            ChannelFactory<IHelloWorld> channelFactory = new ChannelFactory<IHelloWorld>("HttpHelloWorld");
+            IHelloWorld proxy = channelFactory.CreateChannel();
+
+            #endregion
+
 
             // 서비스의 메소드 호출
             string result = proxy.SayHello();
@@ -44,6 +60,11 @@ namespace HelloWorldClient
 
         private static void InvokeUsingHttp()
         {
+
+            #region 하드코딩 설정 방법
+
+            /* 
+             
             // http uri 생성
             Uri uri = new Uri("http://localhost/wcf/helloworldservice");
 
@@ -53,6 +74,16 @@ namespace HelloWorldClient
             // 채널 생성
             ChannelFactory<IHelloWorld> factory = new ChannelFactory<IHelloWorld>(endpoint);
             IHelloWorld proxy = factory.CreateChannel();
+            */
+
+            #endregion
+
+            #region App.config 설정 방법
+
+            ChannelFactory<IHelloWorld> channelFactory = new ChannelFactory<IHelloWorld>("TcpHelloWorld");
+            IHelloWorld proxy = channelFactory.CreateChannel();
+
+            #endregion
 
             // 서비스의 메소드 호출
             string result = proxy.SayHello();
