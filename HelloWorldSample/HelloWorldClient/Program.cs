@@ -16,9 +16,38 @@ namespace HelloWorldClient
     {
         static void Main(string[] args)
         {
+            InvokeUsingHttp();
+            InvokeUsingTcp();
+
+            System.Console.ReadKey(true);
+        }
+
+        private static void InvokeUsingTcp()
+        {
+            // net.tcp uri 생성
+            Uri uri = new Uri("net.tcp://localhost/wcf/helloworldservice");
+
+            // net.tcp 종점 생성
+            ServiceEndpoint endpoint = new ServiceEndpoint(ContractDescription.GetContract(typeof(IHelloWorld)), new NetTcpBinding(), new EndpointAddress(uri));
+
+            // 채널 생성
+            ChannelFactory<IHelloWorld> factory = new ChannelFactory<IHelloWorld>(endpoint);
+            IHelloWorld proxy = factory.CreateChannel();
+
+            // 서비스의 메소드 호출
+            string result = proxy.SayHello();
+            (proxy as IDisposable).Dispose();
+
+            // 결과 출력
+            System.Console.WriteLine(result);
+        }
+
+        private static void InvokeUsingHttp()
+        {
+            // http uri 생성
             Uri uri = new Uri("http://localhost/wcf/helloworldservice");
 
-            // 종점 생성
+            // http 종점 생성
             ServiceEndpoint endpoint = new ServiceEndpoint(ContractDescription.GetContract(typeof(IHelloWorld)), new BasicHttpBinding(), new EndpointAddress(uri));
 
             // 채널 생성
@@ -31,7 +60,6 @@ namespace HelloWorldClient
 
             // 결과 출력
             System.Console.WriteLine(result);
-            System.Console.ReadKey(true);
         }
     }
 }
