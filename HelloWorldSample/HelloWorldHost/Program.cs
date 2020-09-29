@@ -11,6 +11,10 @@ namespace HelloWorldHost
     {
         static void Main(string[] args)
         {
+            #region host , address , endPoint 설정 방법
+
+            /*
+
             // host 생성, address 지정
             // 추가) Base address [net.tcp]용 주소 --> http 통신 뿐만 아니라, net.tcp 통신도 가능한 서비스
             ServiceHost host = new ServiceHost(typeof(HelloWorldWCFService)
@@ -22,6 +26,17 @@ namespace HelloWorldHost
             host.AddServiceEndpoint(typeof(IHelloWorld), new BasicHttpBinding(), "");
             // 2) net.tcp 프로토콜 사용
             host.AddServiceEndpoint(typeof(IHelloWorld), new NetTcpBinding(), "");
+
+            */
+
+            #endregion
+
+            #region App.config 설정 방법
+
+            // 호스트 생성
+            ServiceHost host = new ServiceHost(typeof(HelloWorldWCFService));
+
+            #endregion
 
             // 호스트 open
             host.Open();
