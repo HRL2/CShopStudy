@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldHost", "HelloWorl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldClient", "HelloWorldClient\HelloWorldClient.csproj", "{517FF760-02E1-4204-8DFB-818821FFAB6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldProxyClient", "HelloWorldProxyClient\HelloWorldProxyClient.csproj", "{0EEE8770-CE47-466E-B2AB-879EB4E62B1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{517FF760-02E1-4204-8DFB-818821FFAB6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{517FF760-02E1-4204-8DFB-818821FFAB6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{517FF760-02E1-4204-8DFB-818821FFAB6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EEE8770-CE47-466E-B2AB-879EB4E62B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EEE8770-CE47-466E-B2AB-879EB4E62B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EEE8770-CE47-466E-B2AB-879EB4E62B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EEE8770-CE47-466E-B2AB-879EB4E62B1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
