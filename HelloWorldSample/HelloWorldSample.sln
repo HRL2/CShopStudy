@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldClient", "HelloWo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldProxyClient", "HelloWorldProxyClient\HelloWorldProxyClient.csproj", "{0EEE8770-CE47-466E-B2AB-879EB4E62B1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldSite", "HelloWorldSite\HelloWorldSite.csproj", "{89126A8F-0DD0-4936-AAF4-15CD3CBAC0B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldService", "HelloWorldService\HelloWorldService.csproj", "{81CC6660-480B-4153-8F06-335D213E8009}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{0EEE8770-CE47-466E-B2AB-879EB4E62B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EEE8770-CE47-466E-B2AB-879EB4E62B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EEE8770-CE47-466E-B2AB-879EB4E62B1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89126A8F-0DD0-4936-AAF4-15CD3CBAC0B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89126A8F-0DD0-4936-AAF4-15CD3CBAC0B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89126A8F-0DD0-4936-AAF4-15CD3CBAC0B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89126A8F-0DD0-4936-AAF4-15CD3CBAC0B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81CC6660-480B-4153-8F06-335D213E8009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81CC6660-480B-4153-8F06-335D213E8009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81CC6660-480B-4153-8F06-335D213E8009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81CC6660-480B-4153-8F06-335D213E8009}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
