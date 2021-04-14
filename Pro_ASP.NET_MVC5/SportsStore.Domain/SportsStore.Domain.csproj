@@ -75,6 +75,7 @@
     <Compile Include="Abstract\IProductRepository.cs" />
     <Compile Include="Concreate\EFDbContext.cs" />
     <Compile Include="Concreate\EFProductRepository.cs" />
+    <Compile Include="Entities\Cart.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
