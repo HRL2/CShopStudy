@@ -6,14 +6,19 @@
 
 @foreach (var p in Model.Products)
 {
-    <div>
-        <h3>@p.Name</h3>
-        @p.Description
-        <h4>@p.Price.ToString("c")</h4>
-    </div>
+    //Partial View 로 변경
+    @*<div class="card card-body bg-light">
+        <h3>
+            <strong>@p.Name</strong>
+            <span class="pull-right badge badge-primary">@p.Price.ToString("c")</span>
+        </h3>
+        <span class="lead">@p.Description</span>
+    </div>*@
+
+    @Html.Partial("ProductSummary", p)
 }
 
 
-<div>
-    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x }))
+<div class="page-link">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, category = Model.CurrentCategory }))
 </div>
