@@ -48,5 +48,10 @@ namespace SportsStore.Controllers
             // Index 액션 메서드를 호출하는 새 URL 요청
             return RedirectToAction("Index", new { returnUrl });
         }
+
+        public PartialViewResult Summary(Cart cart)
+        {
+            return PartialView(cart);
+        }
     }
 }

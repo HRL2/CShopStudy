@@ -1,0 +1,13 @@
+﻿@model SportsStore.Domain.Entities.Cart
+
+<div class="d-flex">
+    <div class="navbar-text d-flex">
+        <b style="margin-right:5px">Your cart :</b>
+        @Model.Lines.Sum(p => p.Quantity) item(s),
+        @Model.ComputeTotalValue().ToString("c")
+    </div>
+    
+    <div style="margin-left:10px">
+        @Html.ActionLink("Checkout", "Index", "Cart", new { returnUrl = Request.Url.PathAndQuery }, new { @class = "btn btn-outline-warning" })
+    </div>
+</div>
