@@ -1,0 +1,29 @@
+﻿@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet"/>
+    <link href="~/Content/bootstrap-grid.css" rel="stylesheet"/>
+    <link href="~/Content/bootstrap-reboot.css" rel="stylesheet"/>
+    
+    <!--서버로 form 이 전송되기 전 클라이언트 측에서 유효성 검사 기능 활성(도메인 모델 클래스의 data annotation 에 기반)-->
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <title></title>
+</head>
+<body>
+    <div>
+        @if(TempData["message"] != null)
+        {
+            <div class="alert alert-success">@TempData["message"]</div>
+        }
+        @RenderBody()
+    </div>
+</body>
+</html>
