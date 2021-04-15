@@ -8,6 +8,13 @@ using System.Web.Mvc;
 
 namespace SportsStore.Controllers
 {
+    /* 필터(Filter) : 액션 메서드나 컨트롤러 클래스에 적용할 수 있는 .NET 어트리뷰트
+     * 요청이 처리되는 시점에 MVC 프레임워크의 동작에 변경을 가하여 추가 로직을 끼워 넣을 수 있음
+     * 다양한 종류의 내장 피러와 사용자 지정 필터를 직접 만들 수도 있다.
+     * 
+     * Contoller 에 Authorize 필터를 적용했기 때문에, 해당 Controller 클래스에 있는 액션 메서드들에 필터가 적용된것 처럼 동작된다.
+    */
+    [Authorize]
     public class AdminController : Controller
     {
         private IProductRepository repository;

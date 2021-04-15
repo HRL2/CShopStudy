@@ -1,6 +1,8 @@
 ﻿using Ninject;
 using SportsStore.Domain.Abstract;
 using SportsStore.Domain.Concreate;
+using SportsStore.Infrastructure.Abstract;
+using SportsStore.Infrastructure.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -32,6 +34,9 @@ namespace SportsStore.Infrastructure
                 WriteAsFile = bool.Parse(ConfigurationManager.AppSettings["Email.WriteAsFile"] ?? "false")
             };
             kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>().WithConstructorArgument("settings", emailSettings);
+
+            // form 인증 공급자 추가
+            kernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
         }
 
         public object GetService(Type serviceType)
